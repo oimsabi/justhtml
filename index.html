@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="พื้นที่รวมและเปิดดูงาน HTML จาก GitHub Pages"
+    />
+    <meta name="color-scheme" content="dark" />
+    <title>HTML Showcase</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d12'/%3E%3Cpath d='M25 18 12 32l13 14M39 18l13 14-13 14' fill='none' stroke='%237cf7c9' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="HTML Showcase หน้าแรก">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>HTML Showcase</span>
+      </a>
+      <a
+        class="github-link"
+        id="repository-link"
+        href="https://github.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        ดูบน GitHub
+        <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">PUBLIC HTML COLLECTION</p>
+          <h1 id="page-title">รวมงาน HTML<br />ไว้เปิดดูได้ในที่เดียว</h1>
+        </div>
+        <p class="intro-copy">
+          เลือกชิ้นงานด้านล่างเพื่อเปิดหน้าเว็บจริง แต่ละไฟล์ทำงานแยกกันและแชร์ลิงก์ตรงได้
+        </p>
+      </section>
+
+      <section class="toolbar" aria-label="ค้นหาและสรุปรายการ">
+        <label class="search">
+          <span class="sr-only">ค้นหาชิ้นงาน</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+          <input id="search-input" type="search" placeholder="ค้นหาชื่อหรือโฟลเดอร์…" />
+        </label>
+        <p class="count" id="project-count" aria-live="polite">กำลังโหลด…</p>
+      </section>
+
+      <section>
+        <div class="project-grid" id="project-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">⌁</span>
+          <h2>ยังไม่พบชิ้นงาน</h2>
+          <p>ลองเปลี่ยนคำค้นหา หรือเพิ่มไฟล์ HTML ใหม่ใน repository</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Static HTML · GitHub Pages</p>
+      <p>เพิ่มไฟล์ แล้ว push — แกลเลอรีจะอัปเดตให้อัตโนมัติ</p>
+    </footer>
+
+    <script src="./gallery-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
